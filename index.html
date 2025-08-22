@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customer Reviews - E-commerce Store</title>
+  <title>Smartphone X - E-commerce Store</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
       background: #f8f9fa;
       color: #333;
+      line-height: 1.6;
     }
     header {
       background: #007bff;
@@ -18,10 +22,66 @@
       padding: 20px;
       text-align: center;
     }
+    header h1 {
+      font-size: 2rem;
+    }
     main {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 30px auto;
       padding: 20px;
+    }
+    /* Product Section */
+    .product {
+      display: flex;
+      flex-wrap: wrap;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    .product img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      margin-right: 30px;
+    }
+    .product-details {
+      flex: 1;
+      min-width: 250px;
+    }
+    .product-details h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    .price {
+      font-size: 1.5rem;
+      color: #28a745;
+      margin: 15px 0;
+    }
+    .features {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+    .btn {
+      display: inline-block;
+      background: #007bff;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    /* Reviews Section */
+    h3.section-title {
+      margin: 20px 0;
+      font-size: 1.6rem;
+      color: #444;
     }
     .review {
       background: white;
@@ -36,21 +96,54 @@
     .stars {
       color: gold;
     }
+
+    /* Footer */
     footer {
       background: #222;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       margin-top: 30px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .product {
+        flex-direction: column;
+        text-align: center;
+      }
+      .product img {
+        margin: 0 auto 20px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Customer Reviews</h1>
+    <h1>Welcome to E-commerce Store</h1>
   </header>
 
   <main>
+    <!-- Product Section -->
+    <section class="product">
+      <img src="assets/smartphone.jpg" alt="Smartphone X">
+      <div class="product-details">
+        <h2>Smartphone X</h2>
+        <p>The all-new Smartphone X is packed with cutting-edge features, sleek design, and unbeatable performance. Perfect for work, play, and everything in between.</p>
+        <p class="price">$799</p>
+        <ul class="features">
+          <li>6.5" Super AMOLED Display</li>
+          <li>128GB Storage, 8GB RAM</li>
+          <li>Triple Camera System (48MP + 12MP + 5MP)</li>
+          <li>5000mAh Long-lasting Battery</li>
+          <li>5G Connectivity</li>
+        </ul>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <h3 class="section-title">Customer Reviews</h3>
     <div class="review">
       <p><strong>Alice</strong> <span class="stars">★★★★★</span></p>
       <p>Great phone! Totally worth the price. Camera quality is stunning.</p>
